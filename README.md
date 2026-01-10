@@ -108,12 +108,4 @@ See the [LICENSE](LICENSE) file for details.
 
 Maintained by Monika
 
-
 ---
-
-Would you like me to:
-
-- add an `MIT` license file now,
-- scaffold `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`, or
-- create a minimal `Dockerfile` and a GitHub Actions workflow template?
-
