@@ -1,0 +1,362 @@
+{
+  "intents": [
+    {
+      "name": "check_balance",
+      "examples": [
+        {
+          "text": "What's my account balance?",
+          "status": "trained"
+        },
+        {
+          "text": "Show balance for my savings account",
+          "status": "trained"
+        },
+        {
+          "text": "How much money do I have in my current account?",
+          "status": "trained"
+        },
+        {
+          "text": "Check balance of my savings",
+          "status": "trained"
+        },
+        {
+          "text": "Can you tell me my account balance?",
+          "status": "trained"
+        },
+        {
+          "text": "What's the balance in my checking account?",
+          "status": "trained"
+        },
+        {
+          "text": "Show me my balance",
+          "status": "trained"
+        },
+        {
+          "text": "How much is left in my savings?",
+          "status": "trained"
+        },
+        {
+          "text": "I'd like to see my account balance",
+          "status": "trained"
+        },
+        {
+          "text": "Please display my current balance",
+          "status": "trained"
+        },
+        {
+          "text": "Balance enquiry for my account",
+          "status": "trained"
+        },
+        {
+          "text": "What is my available balance right now?",
+          "status": "trained"
+        },
+        {
+          "text": "Get balance for account ending 1234",
+          "status": "trained"
+        },
+        {
+          "text": "What's the available balance in my account?",
+          "status": "trained"
+        },
+        {
+          "text": "Check my savings balance",
+          "status": "trained"
+        },
+        {
+          "text": "How much funds do I have in my account?",
+          "status": "trained"
+        },
+        {
+          "text": "Tell me my account balance for today",
+          "status": "trained"
+        },
+        {
+          "text": "Show current balance for my current account",
+          "status": "trained"
+        },
+        {
+          "text": "How much funds do I have in my account?",
+          "status": "trained"
+        },
+        {
+          "text": "Display balance",
+          "status": "trained"
+        },
+        {
+          "text": "check my account balance",
+          "status": "trained"
+        },
+        {
+          "text": "Give balance",
+          "status": "trained"
+        }
+      ],
+      "new_examples": [
+        "check"
+      ]
+    },
+    {
+      "name": "transfer_money",
+      "examples": [
+        {
+          "text": "Transfer 5000 from savings to checking",
+          "status": "trained"
+        },
+        {
+          "text": "Move $1500 to account 12345678",
+          "status": "trained"
+        },
+        {
+          "text": "Please transfer $250 to my friend",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer funds from my savings to current account",
+          "status": "trained"
+        },
+        {
+          "text": "I want to send 1000 rupees to account 9876543210",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer $50 to account number 555666",
+          "status": "trained"
+        },
+        {
+          "text": "Make a transfer of 2000 INR to my other account",
+          "status": "trained"
+        },
+        {
+          "text": "Send money to another account",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer amount 7500 to my daughter's account",
+          "status": "trained"
+        },
+        {
+          "text": "Please move 3000 from checking to savings",
+          "status": "trained"
+        },
+        {
+          "text": "Initiate transfer of $1000 to account 11223344",
+          "status": "trained"
+        },
+        {
+          "text": "Pay 4500 to account 99887766",
+          "status": "trained"
+        },
+        {
+          "text": "I need to transfer money to someone",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer ₹1,000 from my savings to my current account",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer 20,000 INR to vendor account",
+          "status": "trained"
+        },
+        {
+          "text": "Move funds to account ending 4321",
+          "status": "trained"
+        },
+        {
+          "text": "Can you transfer $120 to my other account?",
+          "status": "trained"
+        },
+        {
+          "text": "Send payment of 600 to account 33322211",
+          "status": "trained"
+        },
+        {
+          "text": "Transfer 5k from my savings",
+          "status": "trained"
+        },
+        {
+          "text": "transfer money to my friend account",
+          "status": "trained"
+        }
+      ],
+      "new_examples": []
+    },
+    {
+      "name": "card_block",
+      "examples": [
+        {
+          "text": "I want to block my debit card",
+          "status": "trained"
+        },
+        {
+          "text": "Block my credit card immediately",
+          "status": "trained"
+        },
+        {
+          "text": "How can I block a lost card?",
+          "status": "trained"
+        },
+        {
+          "text": "My card is lost, please block it",
+          "status": "trained"
+        },
+        {
+          "text": "Temporarily disable my debit card",
+          "status": "trained"
+        },
+        {
+          "text": "Report lost credit card and block it",
+          "status": "trained"
+        },
+        {
+          "text": "Block card number ending 4321",
+          "status": "trained"
+        },
+        {
+          "text": "How do I freeze my card?",
+          "status": "trained"
+        },
+        {
+          "text": "I think my card was stolen, block it now",
+          "status": "trained"
+        },
+        {
+          "text": "Please block my ATM card",
+          "status": "trained"
+        },
+        {
+          "text": "Deactivate my debit card",
+          "status": "trained"
+        },
+        {
+          "text": "Emergency: block my credit card",
+          "status": "trained"
+        },
+        {
+          "text": "Prevent transactions on my lost card",
+          "status": "trained"
+        },
+        {
+          "text": "Suspend card usage for my debit card",
+          "status": "trained"
+        },
+        {
+          "text": "Block card due to fraudulent activity",
+          "status": "trained"
+        },
+        {
+          "text": "Lock my card immediately",
+          "status": "trained"
+        },
+        {
+          "text": "Stop transactions on my credit card",
+          "status": "trained"
+        },
+        {
+          "text": "Block the card linked to account 123456",
+          "status": "trained"
+        },
+        {
+          "text": "Disable my card temporarily",
+          "status": "trained"
+        },
+        {
+          "text": "Request to block my card",
+          "status": "trained"
+        }
+      ],
+      "new_examples": []
+    },
+    {
+      "name": "find_atm",
+      "examples": [
+        {
+          "text": "Where is the nearest ATM?",
+          "status": "trained"
+        },
+        {
+          "text": "Find ATM in Bangalore",
+          "status": "trained"
+        },
+        {
+          "text": "ATM near me",
+          "status": "trained"
+        },
+        {
+          "text": "Locate nearest ATM branch",
+          "status": "trained"
+        },
+        {
+          "text": "Show me nearby ATMs",
+          "status": "trained"
+        },
+        {
+          "text": "Is there an ATM near Whitefield?",
+          "status": "trained"
+        },
+        {
+          "text": "Nearest ATM to my location",
+          "status": "trained"
+        },
+        {
+          "text": "Where can I withdraw cash nearby?",
+          "status": "trained"
+        },
+        {
+          "text": "Find the closest ATM to my address",
+          "status": "trained"
+        },
+        {
+          "text": "ATM within 1 km of me",
+          "status": "trained"
+        },
+        {
+          "text": "Locate an ATM on MG Road",
+          "status": "trained"
+        },
+        {
+          "text": "Show ATMs near me",
+          "status": "trained"
+        },
+        {
+          "text": "Find ATM open now",
+          "status": "trained"
+        },
+        {
+          "text": "Where is the nearest cash machine?",
+          "status": "trained"
+        },
+        {
+          "text": "Nearest ATM branch for my bank",
+          "status": "trained"
+        },
+        {
+          "text": "ATM location near airport",
+          "status": "trained"
+        },
+        {
+          "text": "Locate ATM using my current location",
+          "status": "trained"
+        },
+        {
+          "text": "Is there an ATM in this area?",
+          "status": "trained"
+        },
+        {
+          "text": "ATM near me that accepts deposits",
+          "status": "trained"
+        },
+        {
+          "text": "Find nearest ATM that dispenses cash",
+          "status": "trained"
+        },
+        {
+          "text": "where the ATM?",
+          "status": "trained"
+        }
+      ],
+      "new_examples": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+{
+  "patterns": [
+    { "label": "ACCOUNT_TYPE", "pattern": [{ "LOWER": "savings" }] },
+    { "label": "ACCOUNT_TYPE", "pattern": [{ "LOWER": "current" }] },
+    { "label": "ACCOUNT_TYPE", "pattern": [{ "LOWER": "checking" }] },
+    { "label": "ACCOUNT_TYPE", "pattern": [{ "LOWER": "business" }] },
+
+    { "label": "CARD_TYPE", "pattern": [{ "LOWER": "debit" }] },
+    { "label": "CARD_TYPE", "pattern": [{ "LOWER": "credit" }] }
+  ],
+
+  "regex_patterns": [
+    {
+      "label": "CARD_LAST4",
+      "pattern": "(?:card)\\s*(?:number\\s*)?(?:ending|last)\\s*(\\b\\d{4}\\b)",
+      "flags": "i"
+    },
+    {
+      "label": "ACCOUNT_LAST4",
+      "pattern": "(?:account|a\\/c|acc|acct)\\s*(?:number\\s*)?(?:ending|last)\\s*(\\b\\d{4}\\b)",
+      "flags": "i"
+    },
+    {
+      "label": "ACCOUNT_NUMBER",
+      "pattern": "(?:account|a\\/c|acc|acct|number|no|id\\.?|acct number)\\s*(\\b\\d{6,18}\\b)",
+      "flags": "i"
+    },
+    {
+      "label": "AMOUNT",
+      "pattern": "(?:transfer|send|sent|pay|paid|payment|move|deposit|withdraw|of)?\\s*(?:rs\\.?|inr|₹|\\$)?\\s*(\\b\\d+(?:,\\d{3})*(?:\\.\\d{1,2})?k?\\b)",
+      "flags": "i"
+    }
+  ]
+}
