@@ -99,8 +99,6 @@ Contributions are welcome. Suggested workflow:
 2. Implement changes with tests and documentation.
 3. Submit a pull request describing the change and rationale.
 
-Consider adding `CONTRIBUTING.md` and a `CODE_OF_CONDUCT.md` for community projects.
-
 ## License
 
 This project is licensed under the **MIT License**.  
