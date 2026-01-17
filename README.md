@@ -1,109 +1,182 @@
-# BankBot_AI
+# BankBot – AI Chatbot for Banking FAQs
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![AI](https://img.shields.io/badge/AI-NLP-orange)
+![LLM](https://img.shields.io/badge/LLM-Transformer--based-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-BankBot_AI is a modular, production-oriented conversational assistant tailored to banking use-cases. It couples a compact NLU engine with a modular dialogue manager and a Streamlit demo UI to accelerate prototyping and early-stage deployments.
+## Project Description
 
----
+**BankBot** is an AI-powered chatbot designed to answer frequently asked banking-related questions efficiently and accurately. The system combines rule-based intent handling with Large Language Model (LLM) capabilities to provide both structured banking responses and intelligent handling of non-banking or open-ended queries.
 
-**Contents**
+This project is developed as part of an **Infosys Certification / Academic AI Project**, focusing on Natural Language Processing (NLP), conversational AI pipelines, and LLM integration.
 
-- Project overview
-- Highlights
-- Quick start
-- Architecture & components
-- Data, models & security
-- Development & testing
-- Deployment & CI recommendations
-- Contributing & governance
-- License & contact
+BankBot demonstrates how traditional chatbot architectures can be enhanced using modern transformer-based language models while maintaining data privacy and control for domain-specific queries.
 
-## Project overview
+## Features
 
-This repository implements a clear separation between NLU, dialogue orchestration, and persistence. It is intended as a practical foundation for building banking assistants that can evolve from local demos to production services.
+* Intent recognition and entity classification for banking queries
+* Predefined conversational pipelines for core banking services
+* SQLite database integration for dynamic responses
+* LLM integration for non-banking or unsupported queries
+* Modular and scalable architecture
+* Admin panel for:
 
-## Highlights
+  * Conversation history
+  * Analytics and confidence tracking
+  * Adding new intents and training examples
+* Configurable LLM support (model-agnostic design)
 
-- Extensible intent and entity definitions with training utilities.
-- Modular dialogue manager for deterministic and scripted flows.
-- Streamlit demo providing a fast feedback loop for product stakeholders.
-- Sample scripts for initializing demo data and local testing.
+## Techniques Used
 
-## Quick start
+### Natural Language Processing (NLP)
 
-1. Create and activate a virtual environment (Windows PowerShell):
+* Tokenization and text preprocessing
+* Intent classification
+* Entity extraction
+* Pattern-based and ML-based matching
 
-```powershell
-python -m venv .venv
-& .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+### Prompt Engineering
+
+* Context-aware prompts
+* Controlled response generation
+* Domain restriction prompts for safe outputs
+
+### LLM-based Text Generation
+
+* Transformer-based LLM usage
+* Fallback mechanism for unknown intents
+* Controlled integration to avoid hallucinations in banking data
+
+## Tech Stack
+
+### Programming Language
+
+* Python 3.x
+
+### Libraries / Frameworks
+
+* Flask / Streamlit (for UI and admin dashboard)
+* SQLite (database)
+* JSON (intent and entity storage)
+* Pandas (analytics and reporting)
+* Plotly (visual analytics)
+
+### AI / ML Technologies
+
+* Natural Language Processing (NLP)
+* Intent Classification
+* Named Entity Recognition (NER)
+* Transformer-based Language Models
+
+## LLM Details
+
+* Uses **transformer-based Large Language Models (LLMs)**
+* LLM is **fully configurable**, allowing:
+
+  * Open-source models (e.g., GPT-style, LLaMA-based models)
+  * API-based models (if enabled)
+* LLM is invoked **only when queries fall outside banking intents**, ensuring accuracy and reliability for domain-specific responses
+
+## Project Structure
+
+```
+Infosys_Project-BankBot-AI-Chatbot-for-Banking-FAQs/
+│
+├── admin_dashboard.py        # Admin panel and analytics
+├── app.py                    # Main chatbot application
+├── database/
+│   └── bankbot.db            # SQLite database
+├── nlu_engine/
+│   ├── intents.json          # Banking intents
+│   ├── entities.json         # Entity definitions
+│   └── nlu_processor.py      # NLP processing logic
+├── llm/
+│   └── llm_handler.py        # LLM integration layer
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+└── assets/                   # UI assets and resources
 ```
 
-2. Start the Streamlit demo:
+## Installation Steps
 
-```powershell
-streamlit run streamlit_app.py
-```
+1. Clone the repository:
 
-3. Run the main application (if desired):
+   ```
+   git clone https://github.com/Monikav31032007/Infosys_Project-BankBot-AI-Chatbot-for-Banking-FAQs.git
+   ```
 
-```powershell
-python main.py
-```
+2. Navigate to the project directory:
 
-## Architecture & components
+   ```
+   cd Infosys_Project-BankBot-AI-Chatbot-for-Banking-FAQs
+   ```
 
-- `nlu_engine/` — intent and entity definitions, training and inference helpers.
-- `dialogue_manager/` — conversation state, handlers and flow orchestration.
-- `database/` — DB utilities, CRUD helpers, `init_sample_data.py` for demos.
-- `streamlit_app.py` / `app.py` — demo and alternate entry points.
-- `models/` — local model artifacts (kept out of Git by `.gitignore`).
+3. Create a virtual environment (optional but recommended):
 
-The codebase is designed so you can replace or augment components with external services (managed NLU, model endpoints, cloud DB) without changing the dialogue logic.
+   ```
+   python -m venv venv
+   ```
 
-## Data, models & security
+4. Activate the virtual environment:
 
-- Keep secrets (API keys, DB credentials) in a `.env` file and never commit them.
-- Do not commit large model files. Use cloud storage or release attachments for sharing.
-- For production, use TLS, managed secrets, and least-privilege database credentials.
+   * Windows:
 
-Initialize demo data:
+     ```
+     venv\Scripts\activate
+     ```
+   * Linux / macOS:
 
-```powershell
-python database/init_sample_data.py
-```
+     ```
+     source venv/bin/activate
+     ```
 
-## Development & testing
+5. Install dependencies:
 
-- Format code with `black` and lint with `ruff`/`flake8`.
-- Add unit tests and run them with `pytest`.
+   ```
+   pip install -r requirements.txt
+   ```
 
-Run tests:
+## How to Run the Project Locally
 
-```powershell
-pytest -q
-```
+1. Start the chatbot application:
 
-## Deployment & CI recommendations
+   ```
+   python app.py
+   ```
 
-- Add a `Dockerfile` for containerized deployments (Python 3.11-slim recommended).
-- Use GitHub Actions to run linting, tests, and build images on PRs.
-- Serve models via dedicated model-serving infrastructure for scalability.
+2. Start the admin dashboard (if separate):
 
-## Contributing & governance
+   ```
+   streamlit run admin_dashboard.py
+   ```
 
-Contributions are welcome. Suggested workflow:
+3. Open your browser and access:
 
-1. Fork and create a feature branch.
-2. Implement changes with tests and documentation.
-3. Submit a pull request describing the change and rationale.
+   * Chatbot UI: `http://localhost:5000` (or specified port)
+   * Admin Dashboard: `http://localhost:8501`
+
+## Certification Use Case
+
+This project is suitable for:
+
+* **Infosys Certification Submission**
+* Academic AI / NLP Mini Project
+* Demonstration of:
+
+  * Conversational AI pipelines
+  * NLP and intent-based systems
+  * LLM integration in real-world applications
+  * AI system design and modular architecture
+
+The project follows industry-aligned practices and showcases applied AI skills relevant to enterprise chatbot development.
 
 ## License
 
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for details.
-
-Maintained by Monika
+This project is licensed under the **MIT License**.
+You are free to use, modify, and distribute this project for educational and non-commercial purposes.
 
 ---
+
+**Developed for academic and certification purposes – showcasing practical AI, NLP, and LLM integration in banking chatbots.**
