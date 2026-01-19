@@ -174,7 +174,7 @@ The project follows industry-aligned practices and showcases applied AI skills r
 
 ## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT LICENCE**.
 You are free to use, modify, and distribute this project for educational and non-commercial purposes.
 
 ---
